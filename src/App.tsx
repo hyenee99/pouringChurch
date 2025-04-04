@@ -1,10 +1,12 @@
+import Header from "./layout/Header"
+import Main from "./pages/Main"
+
 function App() {
 
   return (
     <>
-    <button className="bg-blue-500 text-white px-4 py-2 rounded">
-      안녕
-    </button>
+    <Header />
+    <Main />
     </>
   )
 }
