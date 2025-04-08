@@ -71,7 +71,7 @@ section {
 
 body {
   font-family: 'S-CoreDream-3Light', sans-serif;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 body h1 {

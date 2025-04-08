@@ -1,14 +1,17 @@
-import Header from "./layout/Header"
-import Main from "./pages/Main"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Main from "./pages/Main";
 
 function App() {
-
   return (
-    <>
-    <Header />
-    <Main />
-    </>
-  )
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
