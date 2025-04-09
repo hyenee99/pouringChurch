@@ -6,6 +6,8 @@ import mainImage from "../images/main1.jpg";
 import mainImage2 from "../images/main2.jpg";
 import mainImage3 from "../images/main3.jpg";
 import mainImage4 from "../images/main4.jpg";
+import WorshipInfo from "../components/WorshipInfo";
+import Notice from "../components/Notice";
 
 function Main() {
   const images = [mainImage, mainImage2, mainImage3, mainImage4];
@@ -24,35 +26,39 @@ function Main() {
   };
 
   return (
-    <div className="w-full h-screen overflow-hidden">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="w-full h-screen">
-            <div
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-              }}
-            ></div>
-          </div>
-        ))}
-      </Slider>
-      <p
-        className="absolute top-1/3 left-25 p-4 text-[25px] bg-opacity-50 text-white"
-        style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1.5)" }}
-      >
-        [눅4:18-19]
-        <br />
-        주의 성령이 내게 임하셨으니 이는 가난한 자에게 복음을 전하게 하시려고
-        <br />
-        내게 기름을 부으시고 나를 보내사 포로된 자에게 자유를,
-        <br />눈 먼 자에게 다시 보게 함을 전파하며 눌린 자를 자유롭게 하고
-        <br />
-        주의 은혜의 해를 전파하게 하려 하심이라 하였더라
-      </p>
-    </div>
+    <>
+      <div className="w-full h-screen overflow-hidden">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="w-full h-screen">
+              <div
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: "100%",
+                }}
+              ></div>
+            </div>
+          ))}
+        </Slider>
+        <p
+          className="absolute top-1/3 left-25 p-4 text-[25px] bg-opacity-50 text-white"
+          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1.5)" }}
+        >
+          [눅4:18-19]
+          <br />
+          주의 성령이 내게 임하셨으니 이는 가난한 자에게 복음을 전하게 하시려고
+          <br />
+          내게 기름을 부으시고 나를 보내사 포로된 자에게 자유를,
+          <br />눈 먼 자에게 다시 보게 함을 전파하며 눌린 자를 자유롭게 하고
+          <br />
+          주의 은혜의 해를 전파하게 하려 하심이라 하였더라
+        </p>
+      </div>
+      <WorshipInfo />
+      <Notice />
+    </>
   );
 }
 
