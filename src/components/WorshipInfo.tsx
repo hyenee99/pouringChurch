@@ -24,6 +24,9 @@ function WorshipInfo() {
       {data.map((item, index) => (
         <Worship key={index} title={item.title} contents={item.contents} />
       ))}
+      <button className="block bg-[#7C96C2] hover:bg-[#5A7298] text-white font-bold text-xl w-3xs p-4 rounded cursor-pointer m-auto">
+        예배 더보기
+      </button>
     </div>
   );
 }

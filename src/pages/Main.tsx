@@ -8,6 +8,7 @@ import mainImage3 from "../images/main3.jpg";
 import mainImage4 from "../images/main4.jpg";
 import WorshipInfo from "../components/WorshipInfo";
 import Notice from "../components/Notice";
+import PrayAndShare from "../components/PrayAndShare";
 
 function Main() {
   const images = [mainImage, mainImage2, mainImage3, mainImage4];
@@ -58,6 +59,7 @@ function Main() {
       </div>
       <WorshipInfo />
       <Notice />
+      <PrayAndShare />
     </>
   );
 }
