@@ -19,7 +19,7 @@ function PrayAndShare() {
       <h1 className="text-4xl p-3 mt-4 mb-2">기도 및 나눔</h1>
       <div className="flex justify-around">
         {data.map((item, index) => (
-          <PrayCard key={index} img={item.img} title={item.title} />
+            <PrayCard key={index} img={item.img} title={item.title} />
         ))}
       </div>
     </div>

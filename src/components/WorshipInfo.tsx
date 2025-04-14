@@ -1,4 +1,5 @@
 import Playlist from "./Playlist";
+import RevealAnimation from "./RevealAnimation";
 import Worship from "./Worship";
 
 function WorshipInfo() {
@@ -26,17 +27,18 @@ function WorshipInfo() {
     <div className="text-center">
       <h1 className="text-4xl p-3 mt-4">예배 안내</h1>
       {data.map((item, index) => (
-        <div className="whitespace-pre-line mt-4" key={index}>
-          <Worship title={item.title} contents={item.contents} />
-          <Playlist playlistId={item.playlistId} />
-        </div>
+        <RevealAnimation
+          key={index}
+          delay={index * 0.15} // 각 항목마다 지연 시간을 다르게 설정하여 순차적으로 나타나게 함
+        >
+          <div className="whitespace-pre-line mt-4" key={index}>
+            <Worship title={item.title} contents={item.contents} />
+            <Playlist playlistId={item.playlistId} />
+          </div>
+        </RevealAnimation>
       ))}
       <button className="block bg-[#7C96C2] hover:bg-[#5A7298] text-white font-bold text-xl w-3xs p-4 rounded cursor-pointer m-auto">
-        <a
-          href="https://www.youtube.com/@pouringchurch"
-        >
-          예배 더보기
-        </a>
+        <a href="https://www.youtube.com/@pouringchurch">예배 더보기</a>
       </button>
     </div>
   );
