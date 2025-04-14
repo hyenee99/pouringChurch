@@ -29,7 +29,6 @@ function Header() {
       <nav className="content-center w-1/3 p-4">
       <ul className="flex cursor-pointer justify-between p-4 [&>li]:hover:font-bold [&>li]:hover:scale-110 text-[20px]">
           <li>소개</li>
-          <li>말씀</li>
           <li>소식</li>
           <li>Q&A</li>
           <li>로그인</li>
